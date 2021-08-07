@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    font-family: "Stylish", sans-serif;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    text-align: center;
+    height: 100vh;
+    > div:first-child {
+        background-color: #f5e13f;
+    }
+    > div:nth-child(2) {
+        background-color: #f6ca9f;
+    }
+}
