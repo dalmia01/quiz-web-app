@@ -30,14 +30,14 @@ export const Result = ({ questionnaire, correctQues, totalQuestions, resetQuiz }
                         </tr>
                     ))}
                 </tbody>
-                <thead>
+                <tfoot>
                     <tr>
                         <th colSpan="1">Result</th>
                         <th colSpan="2">Total Correct : {correctQues}</th>
                         <th colSpan="2">Total Wrong : {totalQuestions - correctQues}</th>
                         <th colSpan="2">Percentage : {Number((correctQues / totalQuestions) * 100).toFixed(2)}% </th>
                     </tr>
-                </thead>
+                </tfoot>
             </table>
             <Button text="Reset" clickHandler={resetQuiz} classType="reset-btn" />
         </Fragment>

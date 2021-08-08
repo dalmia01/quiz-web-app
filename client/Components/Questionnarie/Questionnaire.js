@@ -16,11 +16,11 @@ export const Questionnaire = () => {
                 Question {counter} of {totalQuestions}
             </div>
             <div>
-                <label>
-                    <span className="operands">{currentQuestion.operand1}</span>
-                    <b>{currentQuestion.operator}</b>
-                    <span className="operands">{currentQuestion.operand2}</span>
-                </label>
+                <span>
+                    <label className="operands">{currentQuestion.operand1}</label>
+                    <b className="operator">{currentQuestion.operator}</b>
+                    <label className="operands">{currentQuestion.operand2}</label>
+                </span>
                 <b> = </b>
                 <Input focus numValChange={(e) => answerChange(e, index)} numInputVal={currentQuestion.given} />
                 {currentQuestion.given.length > 0 && counter < totalQuestions && (
@@ -30,6 +30,7 @@ export const Questionnaire = () => {
                     <Button text="Submit" clickHandler={(e) => submitQuiz(e, index)} />
                 )}
             </div>
+            <div>Score : {item.correctQues}</div>
         </div>
     );
 };
